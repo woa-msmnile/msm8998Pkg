@@ -10,7 +10,7 @@
 ##
 
 [PcdsFixedAtBuild.common]
-  gArmTokenSpaceGuid.PcdSystemMemoryBase|0x80000000         # Starting address
+  gArmTokenSpaceGuid.PcdSystemMemoryBase|0x40000000         # Starting address
   gArmTokenSpaceGuid.PcdCpuVectorBaseAddress|0x9FF8C000
   gArmTokenSpaceGuid.PcdArmArchTimerFreqInHz|19200000
   gArmTokenSpaceGuid.PcdArmArchTimerSecIntrNum|17
@@ -26,15 +26,15 @@
   gEmbeddedTokenSpaceGuid.PcdInterruptBaseAddress|0x9BC0000
   gEmbeddedTokenSpaceGuid.PcdPrePiCpuIoSize|44
 
-  gSurfaceDuoFamilyPkgTokenSpaceGuid.PcdSmbiosProcessorModel|"Snapdragon (TM) 720G @ 2.40 GHz"
-  gSurfaceDuoFamilyPkgTokenSpaceGuid.PcdSmbiosProcessorRetailModel|"SM7125"
+  gSurfaceDuoFamilyPkgTokenSpaceGuid.PcdSmbiosProcessorModel|"Snapdragon"
+  gSurfaceDuoFamilyPkgTokenSpaceGuid.PcdSmbiosProcessorRetailModel|"MSM8998"
 
-  gArmTokenSpaceGuid.PcdSystemMemoryBase|0x80000000         # 2GB Base
+  gArmTokenSpaceGuid.PcdSystemMemoryBase|0x40000000         # 1GB Base
   gArmPlatformTokenSpaceGuid.PcdCoreCount|8
   gArmPlatformTokenSpaceGuid.PcdClusterCount|2
 
   # UART
-  gSurfaceDuoFamilyPkgTokenSpaceGuid.PcdUartSerialBase|0x00A90000
+  # gSurfaceDuoFamilyPkgTokenSpaceGuid.PcdUartSerialBase|0x00A90000
 
 [LibraryClasses.common]
   #PlatformMemoryMapLib|QcomPkg/Library/PlatformMemoryMapLib/PlatformMemoryMapLib.inf
