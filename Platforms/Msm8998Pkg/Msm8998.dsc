@@ -46,7 +46,7 @@ GCC:*_*_AARCH64_CC_FLAGS = -DSILICON_PLATFORM=8998
 
 [PcdsFixedAtBuild.common]
   # Platform-specific
-  gArmTokenSpaceGuid.PcdSystemMemorySize|0xF0000000            # 4GB
+  gArmTokenSpaceGuid.PcdSystemMemorySize|0x180000000            # 4GB
 
 [Components.common]
   # Graphics Driver

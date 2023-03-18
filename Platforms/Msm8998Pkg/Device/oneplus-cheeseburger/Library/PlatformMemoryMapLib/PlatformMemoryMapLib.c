@@ -4,18 +4,20 @@
 static ARM_MEMORY_REGION_DESCRIPTOR_EX gDeviceMemoryDescriptorEx[] = {
     /* Name               Address     Length      HobOption        ResourceAttribute    ArmAttributes
                                                           ResourceType          MemoryType */
-   /* DDR Regions */
-    // !There are many issues that need to be fixed1
-    {"RAM Partition",     0x80000000, 0x01AC0000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK_XN},
-    {"HLOS 1",            0x81AC0000, 0x03C40000, AddMem, SYS_MEM, SYS_MEM_CAP, BsData, WRITE_BACK_XN},
+    /* DDR Regions */
+    /* 0x40000000 - 0x1BD8C0000 */
+    {"DBI Dump",          0x40000000, 0x000B0000, NoHob,  MMAP_IO, INITIALIZED, Reserv, UNCACHED_UNBUFFERED_XN},
+    {"DXE Heap",          0x400B0000, 0x09400000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK_XN},
+    {"RAM Partition",     0x494B0000, 0x36B50000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv, WRITE_BACK_XN},
+    {"RAM Partition",     0x80000000, 0x05800000, AddMem, SYS_MEM, SYS_MEM_CAP, Reserv, WRITE_BACK_XN},
     {"Hypervisor",        0x85800000, 0x00600000, AddMem, SYS_MEM, SYS_MEM_CAP, Reserv, NS_DEVICE},
     {"MPSS_EFS",          0x85E00000, 0x00200000, AddMem, SYS_MEM, SYS_MEM_CAP, Reserv, UNCACHED_UNBUFFERED_XN},
     {"SMEM",              0x86000000, 0x00200000, AddMem, MEM_RES, WRITE_COMBINEABLE, Reserv, UNCACHED_UNBUFFERED},
     {"TZ",                0x86200000, 0x00B00000, AddMem, SYS_MEM, SYS_MEM_CAP, Reserv, NS_DEVICE},
     {"TZApps",            0x86D00000, 0x00E00000, NoHob,  SYS_MEM, SYS_MEM_CAP, Reserv, NS_DEVICE},
     {"HLOS 2",            0x87B00000, 0x03000000, NoHob,  SYS_MEM, SYS_MEM_CAP, Reserv, NS_DEVICE},
-    {"DXE Heap",          0x94600000, 0x04500000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK_XN},
-    {"DBI Dump",          0x98B00000, 0x00D70000, NoHob,  MMAP_IO, INITIALIZED, Reserv, UNCACHED_UNBUFFERED_XN},
+    {"PIL_REGION",        0x8AB00000, 0x0AD15000, AddMem, SYS_MEM, SYS_MEM_CAP, Reserv, UNCACHED_UNBUFFERED_XN},
+    {"HLOS 3",            0x95815000, 0x07BEB000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK_XN},
     {"Display Reserved",  0x9D400000, 0x02400000, AddMem, MEM_RES, SYS_MEM_CAP, Reserv, WRITE_THROUGH_XN},
     {"FV Region",         0x9F800000, 0x00400000, AddMem, SYS_MEM, SYS_MEM_CAP, BsData, WRITE_BACK_XN},
     {"UEFI FD",           0x9FC00000, 0x00300000, AddMem, SYS_MEM, SYS_MEM_CAP, BsData, WRITE_BACK},
@@ -32,18 +34,11 @@ static ARM_MEMORY_REGION_DESCRIPTOR_EX gDeviceMemoryDescriptorEx[] = {
     {"Log Buffer",        0x9FFF7000, 0x00008000, AddMem, SYS_MEM, SYS_MEM_CAP, RtData, WRITE_BACK_XN},
     {"Info Blk",          0x9FFFF000, 0x00001000, AddMem, SYS_MEM, SYS_MEM_CAP, RtData, WRITE_BACK_XN},
 
-    /**************************************************
-    *                                                 *
-    *  RamPartitionDXE will add MLVM regions Later.   *
-    *    0xA0000000 to MEMORY_HOLE_START_ADDR         *
-    *                                                 *
-    **************************************************/
-    //6GB
-    // Memory hole: 0xBC900000 - 0xBFFFFFFF
-    // Size: 0x33FFFFF
-
-    /* 6GiB Memory */
-    {"RAM Partition",     0xD0000000, 0x0AE4C0000, AddMem,  SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK_XN},
+    /* GiB Memory */
+    {"RAM Partition",     0xA0000000, 0x80000000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK_XN},
+    {"RAM Partition",     0x120000000,0x80000000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK_XN},
+    {"RAM Partition",     0x1A0000000,0x1D8C0000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK_XN},
+    /* 0x40000000 - 0x1BD8C0000 */
 
     /* Other memory regions */
     {"IMEM Base",         0x14680000, 0x00040000,  NoHob,  MMAP_IO, INITIALIZED, Conv,   NS_DEVICE},
