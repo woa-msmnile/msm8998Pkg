@@ -82,7 +82,7 @@ connected at the beginning of BDS
 **/
 EFI_DEVICE_PATH_PROTOCOL **EFIAPI GetPlatformConnectList(VOID)
 {
-  PlatformUpdateAcpiTables();
+  // PlatformUpdateAcpiTables();
   return NULL;
 }
 

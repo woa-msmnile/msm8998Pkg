@@ -58,7 +58,7 @@ INF Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/PlatformInfoDxe/
 #INF Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/ButtonsDxe/ButtonsDxe.inf
 INF Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/PmicDxe/PmicDxeLa.inf
 #INF Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/ChargerExDxe/ChargerExDxe.inf
-INF Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/QcomChargerDxe/QcomChargerDxeLA.inf
+#INF Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/QcomChargerDxe/QcomChargerDxeLA.inf
 INF Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/AdcDxe/AdcDxe.inf
 INF Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/TsensDxe/TsensDxe.inf
 #INF Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/LimitsDxe/LimitsDxe.inf
@@ -81,10 +81,10 @@ FILE DRIVER = cccb0c28-4b24-11d5-9a5a-0090273fc14d {
     SECTION UI = "GraphicsConsoleDxe"
 }
 
-FILE DRIVER = 32C71E68-83A8-46ED-AED1-094E71B12057 {
-    SECTION PE32 = Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/SecRSADxe/SecRSADxe.efi
-    SECTION UI = "SecRSADxe"
-}
+#FILE DRIVER = 32C71E68-83A8-46ED-AED1-094E71B12057 {
+#    SECTION PE32 = Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/SecRSADxe/SecRSADxe.efi
+#    SECTION UI = "SecRSADxe"
+#}
 
 FILE DRIVER = F09AD92E-4E91-490F-AB99-E69939B840B2 {
     SECTION PE32 = Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/LimitsDxe/LimitsDxe.efi
@@ -92,10 +92,10 @@ FILE DRIVER = F09AD92E-4E91-490F-AB99-E69939B840B2 {
 }
 
 
-FILE DRIVER = C2F9A4F5-F7B4-43E7-BA99-5EA804CC103A {
-    SECTION PE32 = Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/ASN1X509Dxe/ASN1X509Dxe.inf
-    SECTION UI = "ASN1X509Dxe"
-}
+#FILE DRIVER = C2F9A4F5-F7B4-43E7-BA99-5EA804CC103A {
+#    SECTION PE32 = Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/ASN1X509Dxe/ASN1X509Dxe.inf
+#    SECTION UI = "ASN1X509Dxe"
+#}
 
 FILE FREEFORM = A91D838E-A5FA-4138-825D-455E2303079E {
     SECTION UI = "BDS_Menu.cfg"
