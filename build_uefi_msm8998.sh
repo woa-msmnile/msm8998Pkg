@@ -38,13 +38,13 @@ if [ ${TARGET_DEVICE} = 'all' ]; then
 
         TARGET_DEVICE=$(basename ${i})
         # Update Configuration Map for each Device.
-        rm Build/Atoll-AARCH64/DEBUG_CLANG38/AARCH64/QcomPkg/PlatformPei/ -rf
+        rm Build/Msm8998-AARCH64/DEBUG_CLANG38/AARCH64/QcomPkg/PlatformPei/ -rf
         cp Platforms/Msm8998Pkg/Device/${TARGET_DEVICE}/Include/Configuration/DeviceConfigurationMap.h Silicon/QC/Msm8998/QcomPkg/Include/Configuration/DeviceConfigurationMap.h
         stuart_build -c Platforms/Msm8998Pkg/PlatformBuild.py TOOL_CHAIN_TAG=CLANG38 "TARGET_DEVICE=${TARGET_DEVICE}"
     done
 else
     # Update Configuration Map.
-    rm Build/Atoll-AARCH64/DEBUG_CLANG38/AARCH64/QcomPkg/PlatformPei/ -rf
+    rm Build/Msm8998-AARCH64/DEBUG_CLANG38/AARCH64/QcomPkg/PlatformPei/ -rf
     cp Platforms/Msm8998Pkg/Device/${TARGET_DEVICE}/Include/Configuration/DeviceConfigurationMap.h Silicon/QC/Msm8998/QcomPkg/Include/Configuration/DeviceConfigurationMap.h
     stuart_build -c Platforms/Msm8998Pkg/PlatformBuild.py TOOL_CHAIN_TAG=CLANG38 "TARGET_DEVICE=${TARGET_DEVICE}"
 fi

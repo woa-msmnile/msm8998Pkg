@@ -65,13 +65,13 @@ GCC:*_*_AARCH64_CC_FLAGS = -DSILICON_PLATFORM=8998
 # Suggest you updating them to your device's dsc.inc.
 [PcdsDynamicDefault.common]
   gEfiMdeModulePkgTokenSpaceGuid.PcdVideoHorizontalResolution|1080
-  gEfiMdeModulePkgTokenSpaceGuid.PcdVideoVerticalResolution|2340
+  gEfiMdeModulePkgTokenSpaceGuid.PcdVideoVerticalResolution|1920
   gEfiMdeModulePkgTokenSpaceGuid.PcdSetupVideoHorizontalResolution|1080
-  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupVideoVerticalResolution|2340
-  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupConOutRow|120 # 94.73
-  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupConOutColumn|90 # 168.75
-  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutRow|120 # 94.73
-  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutColumn|90 # 168.75
+  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupVideoVerticalResolution|1920
+  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupConOutRow|154 # 94.73
+  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupConOutColumn|74 # 168.75
+  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutRow|154 # 94.73
+  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutColumn|74 # 168.75
 
 !include QcomPkg/QcomPkg.dsc.inc
 !include Msm8998Pkg/Device/$(TARGET_DEVICE)/PcdsFixedAtBuild.dsc.inc
