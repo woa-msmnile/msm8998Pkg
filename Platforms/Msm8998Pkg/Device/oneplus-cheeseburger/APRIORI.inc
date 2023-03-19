@@ -24,6 +24,7 @@ APRIORI DXE {
     INF Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/ChipInfoDxe/ChipInfoDxe.inf
     INF Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/PlatformInfoDxe/PlatformInfoDxe.inf
     INF Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/ULogDxe/ULogDxe.inf
+    # Patched ClockDxe
     INF Msm8998Pkg/Device/$(TARGET_DEVICE)/PatchedBinaries/ClockDxe/ClockDxe.inf
     INF Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/GLinkDxe/GLinkDxe.inf
     INF Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/NpaDxe/NpaDxe.inf

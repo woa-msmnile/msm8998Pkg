@@ -43,6 +43,7 @@ MdeModulePkg/Universal/Disk/PartitionDxe/PartitionDxe.inf
 #Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/MdeModulePkg/Universal/Disk/UnicodeCollation/EnglishDxe/EnglishDxe.inf
 #Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/MdeModulePkg/Universal/FvSimpleFileSystemDxe/FvSimpleFileSystemDxe.inf
 Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/DALSYSDxe/DALSYSDxe.inf
+# Patched ClockDxe
 Msm8998Pkg/Device/$(TARGET_DEVICE)/PatchedBinaries/ClockDxe/ClockDxe.inf
 Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/HWIODxe/HWIODxe.inf
 Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/I2CDxe/I2CDxe.inf
@@ -65,8 +66,9 @@ Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/UsbfnDwc3Dxe/UsbfnDw
 Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/QdssDxe/QdssDxe.inf
 Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Application/QcomChargerApp/QcomChargerApp.inf
 
+# Patched Binaries
+Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/UFSDxe/UFSDxe.inf
+Msm8998Pkg/Device/$(TARGET_DEVICE)/PatchedBinaries/ButtonsDxe/ButtonsDxe.inf
 #Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/PatchedBinaries/78EF0A56-1CF0-4535-B5DA-F6FD2F405A25.inf
-#Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/PatchedBinaries/ButtonsDxe.inf
 #Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/HALIOMMUDxe/HALIOMMUDxe.inf
 #Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/UsbConfigDxe/UsbConfigDxe.inf
-Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/UFSDxe/UFSDxe.inf

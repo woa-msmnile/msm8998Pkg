@@ -45,6 +45,7 @@ INF MdeModulePkg/Universal/Disk/PartitionDxe/PartitionDxe.inf
 #INF MdeModulePkg/Universal/Disk/UnicodeCollation/EnglishDxe/EnglishDxe.inf
 #INF MdeModulePkg/Universal/FvSimpleFileSystemDxe/FvSimpleFileSystemDxe.inf
 INF Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/DALSYSDxe/DALSYSDxe.inf
+# Patched ClockDxe
 INF Msm8998Pkg/Device/$(TARGET_DEVICE)/PatchedBinaries/ClockDxe/ClockDxe.inf
 INF Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/HWIODxe/HWIODxe.inf
 INF Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/I2CDxe/I2CDxe.inf
@@ -73,7 +74,7 @@ INF Msm8998Pkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Application/QcomChargerA
 
 # Patched Binaries
 #INF Msm8998Pkg/Device/$(TARGET_DEVICE)/PatchedBinaries/UsbConfigDxe/UsbConfigDxe.inf
-#INF Msm8998Pkg/Device/$(TARGET_DEVICE)/PatchedBinaries/ButtonsDxe.inf
+INF Msm8998Pkg/Device/$(TARGET_DEVICE)/PatchedBinaries/ButtonsDxe/ButtonsDxe.inf
 
 # DXE without depex
 FILE DRIVER = cccb0c28-4b24-11d5-9a5a-0090273fc14d {
