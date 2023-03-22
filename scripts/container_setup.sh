@@ -16,5 +16,5 @@ git config --global --add safe.directory '*'
 sudo chown -R root .
 ./setup_uefi.sh
 python3 ./Platforms/SurfaceDuo1Pkg/StampBuild.py
-./build_uefi.sh -d all
+./build_uefi_msm8998.sh -d all
 exit
