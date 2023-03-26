@@ -8,11 +8,11 @@ updates:
   - package-ecosystem: "gitsubmodule"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "monthly"
     commit-message:
       prefix: "pip"
